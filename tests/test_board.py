@@ -15,6 +15,7 @@ class BoardTests(unittest.TestCase):
         self.assertEqual(summary["jobs"], 2)
         self.assertEqual(summary["open"], 1)
         self.assertEqual(summary["sent"], 1)
+        self.assertEqual(summary["forms"], 0)
         self.assertEqual(len(sources), 3)
         self.assertEqual(rows[0]["status"], "לא הוגש")
         self.assertEqual(rows[1]["kind"], "טופס באתר")
