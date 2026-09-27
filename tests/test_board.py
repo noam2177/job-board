@@ -27,6 +27,7 @@ class BoardTests(unittest.TestCase):
         _, sources, summary = collect(jobs)
         self.assertEqual(len(sources), 1)
         self.assertEqual(summary["open"], 1)
+        self.assertEqual(summary["closed"], 1)
 
     def test_html_is_escaped(self) -> None:
         page = render([{"company": "<b>", "title": "ת", "status": "not_submitted", "application_type": "email"}])

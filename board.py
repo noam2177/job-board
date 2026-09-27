@@ -53,6 +53,7 @@ def collect(jobs: list[dict]) -> tuple[list[dict], list[dict], dict]:
         "sources": len(sources),
         "sent": sum(1 for row in rows if row["status"] == "מייל נשלח"),
         "open": sum(1 for row in rows if row["status"] == "לא הוגש"),
+        "closed": sum(1 for row in rows if row["status"] == "נסגר"),
     }
     return rows, sources, summary
 
@@ -101,7 +102,7 @@ a {{ word-break: break-all; }}
 </head>
 <body>
 <h1>מעקב משרות</h1>
-<p>{summary['jobs']} משרות · {summary['sources']} מקורות · {summary['sent']} נשלחו · {summary['open']} עדיין לא הוגשו.</p>
+<p>{summary['jobs']} משרות · {summary['sources']} מקורות · {summary['sent']} נשלחו · {summary['open']} עדיין לא הוגשו · {summary['closed']} נסגרו.</p>
 <h2>משרות</h2>
 <table>
 <thead><tr><th>חברה</th><th>תפקיד</th><th>מיקום</th><th>סוג</th><th>סטטוס</th><th>מקור</th><th>הערה</th></tr></thead>
