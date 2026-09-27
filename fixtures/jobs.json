@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    {
+      "company": "חברה לדוגמה",
+      "title": "ניתוח נתונים",
+      "location": "תל אביב",
+      "application_type": "email",
+      "status": "not_submitted",
+      "source_url": "https://example.com/jobs/1",
+      "source_index_url": "https://example.com/board",
+      "notes": "עוד לא נשלח"
+    },
+    {
+      "company": "סטודיו לדוגמה",
+      "title": "פיתוח",
+      "location": "חיפה",
+      "application_type": "web_form",
+      "status": "email_sent",
+      "source_url": "https://example.com/jobs/2",
+      "notes": ""
+    }
+  ]
+}
